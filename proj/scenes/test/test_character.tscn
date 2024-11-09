@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhmvsalhfeusu"]
+
+[ext_resource type="Curve" uid="uid://iq76rl5hlpiv" path="res://resources/test/test_player_acc.tres" id="1_n8glp"]
+[ext_resource type="Curve" uid="uid://bygj0rbnsvd37" path="res://resources/test/test_player_dec.tres" id="2_fb1ap"]
+[ext_resource type="Texture2D" uid="uid://dsdrd787v8laa" path="res://icon.svg" id="3_lbcfe"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ftgau"]
+
+[node name="TestCharacter" type="TestCharacter"]
+acc_curve = ExtResource("1_n8glp")
+dec_curve = ExtResource("2_fb1ap")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ftgau")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.65, 0)
+texture = ExtResource("3_lbcfe")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc25wd2jbreot"]
+
+[ext_resource type="PackedScene" uid="uid://vufnefhwd7l7" path="res://objects/test/test_floor.tscn" id="1_q840q"]
+[ext_resource type="PackedScene" uid="uid://dhmvsalhfeusu" path="res://scenes/test/test_character.tscn" id="2_8m3fr"]
+
+[node name="TestScene" type="Node3D"]
+
+[node name="TestFloor" parent="." instance=ExtResource("1_q840q")]
+
+[node name="TestCharacter" parent="." instance=ExtResource("2_8m3fr")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.500514, 0.865728, 0, -0.865728, 0.500514, 0, 3.97177, 2.79807)
+projection = 1
+size = 6.625

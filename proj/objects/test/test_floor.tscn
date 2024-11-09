@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://vufnefhwd7l7"]
+
+[ext_resource type="Shader" path="res://objects/test/test_floor.gdshader" id="1_t0rae"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hprbw"]
+size = Vector3(100, 0.001, 100)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nf11n"]
+size = Vector2(100, 100)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_31k5u"]
+render_priority = 0
+shader = ExtResource("1_t0rae")
+
+[node name="TestFloor" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hprbw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_nf11n")
+surface_material_override/0 = SubResource("ShaderMaterial_31k5u")
